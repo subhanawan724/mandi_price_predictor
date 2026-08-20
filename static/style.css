@@ -1,0 +1,154 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #1e293b;
+   
+    background: linear-gradient(-45deg, #062316, #1b8c57, #0f172a, #0b4d2f);
+    background-size: 400% 400%;
+    animation: liveBgWave 12s ease infinite;
+}
+
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+h1 {
+    text-align: center;
+    color: #0f172a;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+
+.analytics-container, 
+.trader-container, 
+.admin-security-box {
+    background: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(10px); 
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+
+.analytics-container { border-top: 4px solid #10b981; } 
+.trader-container    { border-top: 4px solid #3b82f6; } 
+.admin-security-box  { border-top: 4px solid #ef4444; } 
+
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+select {
+    width: 100%;
+    max-width: 400px;
+    padding: 11px 14px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #334155;
+    transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+
+button {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 11px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #1e293b;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+
+#predictionResult, #adminResultText {
+    background-color: #ffffff;
+    border-left: 4px solid #3b82f6;
+    padding: 14px;
+    margin-top: 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #334155;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+
+.filters-bar {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filters-bar select {
+    max-width: 200px;
+    margin-bottom: 0;
+}
+
+
+@keyframes liveBgWave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.trader-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+
+label, h1, h2, h3 {
+    color: #ffffff !important;
+}
+
+.analytics-container, 
+.trader-container, 
+.admin-security-box {
+    background: rgba(15, 23, 42, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(27, 140, 87, 0.4) !important;
+}
+
+input, select {
+    background-color: #1e293b !important;
+    color: #ffffff !important;
+    border: 1px solid #334155 !important;
+}
