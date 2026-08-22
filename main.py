@@ -37,7 +37,7 @@ model2_features = joblib.load("model2_features.pkl")
 with open("item_perishability_mapping.json", "r") as f:
   ITEM_PERISHABILITY_MAP = json.load(f)
 
-OPENWEATHER_API_KEY = os.getenv(("OPENWEATHER_API_KEY", "your_default_fallback_key"))
+OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY", "your_default_fallback_key")
 
 
 
