@@ -6,6 +6,7 @@ import os
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Optional
+from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from datetime import datetime, timedelta
 from fastapi import HTTPException, status
@@ -27,6 +28,12 @@ def clean_expired_history():
 
 app = FastAPI(title="Mandi Trader Intelligence API")
 
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+
+@app.get("/")
+def read_index():
+    return FileResponse("static/index.html")
 
 model1 = joblib.load("model1_spoilage_classifier.pkl")
 model2 = joblib.load("model2_price_regressor.pkl")
