@@ -2,5 +2,6 @@ fastapi
 uvicorn
 joblib
 pydantic
+pandas
 requests
 scikit-learn==1.5.2
